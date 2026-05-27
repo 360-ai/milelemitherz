@@ -78,8 +78,8 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
-  line-height: 1.12;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.14;
   font-weight: 400;
 }
 
@@ -94,7 +94,7 @@ p:last-child { margin-bottom: 0; }
 .eyebrow {
   font-family: var(--mono);
   font-size: 12px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--moss-deep);
   font-weight: 500;
@@ -134,7 +134,7 @@ section {
   max-width: 760px;
 }
 
-.section-head .eyebrow + h2 { margin-top: 4px; }
+.section-head .eyebrow + h2 { margin-top: 4px; max-width: 20ch; }
 
 /* ───────── Buttons ───────── */
 
