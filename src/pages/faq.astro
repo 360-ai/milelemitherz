@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Muss man Erfahrung mit Tieren haben?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Erfahrung mit Tieren ist nicht notwendig. Viele Menschen erleben bereits durch die Begegnung mit Tieren und Natur einen Zugang zu Ruhe, Beziehung und neuen Erfahrungen. Die Arbeit orientiert sich immer am individuellen Tempo und an den jeweiligen Bedürfnissen. Niemand muss hier etwas leisten oder können." } },
+    { "@type": "Question", "name": "Wie läuft ein erstes Kennenlernen ab?", "acceptedAnswer": { "@type": "Answer", "text": "Der erste Kontakt erfolgt in der Regel über die Webseite oder per Nachricht. Anschließend wird ein unverbindlicher Kennenlerntermin vereinbart. Dabei geht es vor allem darum, sich gegenseitig kennenzulernen, Fragen zu klären und gemeinsam zu schauen, welches Angebot passend sein könnte. Vertrauen und Beziehung dürfen Schritt für Schritt entstehen." } },
+    { "@type": "Question", "name": "Wie lange dauern die Angebote?", "acceptedAnswer": { "@type": "Answer", "text": "Die Dauer richtet sich nach dem jeweiligen Setting und den individuellen Bedürfnissen. Einzelsettings dauern in der Regel zwischen 45 und 90 Minuten. Zusätzlich sind auch längere Gruppenangebote, Workshops oder Tagesangebote möglich." } },
+    { "@type": "Question", "name": "Finden die Angebote einzeln oder in Gruppen statt?", "acceptedAnswer": { "@type": "Answer", "text": "Beides ist möglich. Die Gruppen werden bewusst klein gehalten — in der Regel maximal fünf Personen — damit individuelle Begleitung und echte Beziehung möglich bleiben. Workshops oder besondere Tagesangebote können davon abweichen." } },
+    { "@type": "Question", "name": "Was passiert bei schlechtem Wetter?", "acceptedAnswer": { "@type": "Answer", "text": "Die Arbeit findet überwiegend draußen in der Natur statt. Für Einzelsettings gibt es zudem geschützte Möglichkeiten im Innenbereich. Natur gehört mit ihren unterschiedlichen Wetterbedingungen bewusst zur gemeinsamen Erfahrung dazu — die Gestaltung wird jedoch immer achtsam an die Situation angepasst." } },
+    { "@type": "Question", "name": "Ersetzen die Angebote eine Therapie?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Angebote verstehen sich als begleitende, stabilisierende und ressourcenorientierte Unterstützung. Sie ersetzen keine psychotherapeutische, psychiatrische oder medizinische Behandlung." } },
+    { "@type": "Question", "name": "Können Eltern oder Bezugspersonen eingebunden werden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, das ist grundsätzlich möglich. Gerade bei Kindern und Jugendlichen kann es sinnvoll sein, Eltern oder wichtige Bezugspersonen in Prozesse mit einzubeziehen. Gleichzeitig wird immer individuell geschaut, welche Form der Begleitung hilfreich und passend ist." } },
+    { "@type": "Question", "name": "Muss aktiv mit den Tieren gearbeitet werden?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Manche Menschen möchten aktiv mit den Tieren arbeiten, andere erleben bereits durch Beobachtung, Ruhe oder gemeinsame Zeit in der Natur einen positiven Zugang. Niemand wird zu Kontakt oder Nähe gedrängt." } },
+    { "@type": "Question", "name": "Für wen sind die Angebote geeignet?", "acceptedAnswer": { "@type": "Answer", "text": "Die Angebote richten sich an Kinder, Jugendliche und Erwachsene in unterschiedlichen Lebenssituationen — bei sozial-emotionalem Unterstützungsbedarf, Stress und Überforderung, Konflikt- oder Aggressionsthematiken, emotionalen Belastungen, Erschöpfung oder dem Wunsch nach Stabilisierung und persönlicher Entwicklung." } },
+    { "@type": "Question", "name": "Wo finden die Angebote statt?", "acceptedAnswer": { "@type": "Answer", "text": "Die Angebote finden überwiegend auf dem naturnahen Hofgelände am Waldrand von Marburg statt. Wald, Wiesen, Garten und Tiere schaffen dort einen ruhigen und naturnahen Rahmen fern vom Alltag." } },
+    { "@type": "Question", "name": "Wie groß sind die Gruppen?", "acceptedAnswer": { "@type": "Answer", "text": "Die Gruppen werden bewusst klein gehalten, damit individuelle Begleitung, Beziehung und gemeinsames Arbeiten möglich bleiben. In der Regel bestehen Gruppen aus maximal fünf Personen. Workshops oder besondere Tagesangebote können davon abweichen." } },
+    { "@type": "Question", "name": "Was ist beim Erstkontakt besonders wichtig?", "acceptedAnswer": { "@type": "Answer", "text": "Besonders wichtig ist ein respektvoller und wertfreier Rahmen. Niemand muss beim ersten Gespräch sofort alles erzählen oder offenlegen. Vertrauen darf Schritt für Schritt entstehen. Gerade bei Kindern und Jugendlichen ist es wichtig, nicht über sie zu sprechen, sondern sie aktiv mit einzubeziehen und ernst zu nehmen." } },
+  ]
+};
+---
+
+<Layout
+  title="Häufige Fragen"
+  description="Häufige Fragen zu den Angeboten von milele.mit.herz: Tiergestützte Interventionen, Coaching, Deeskalationsarbeit und Jugendhilfe in Marburg."
+  headerTheme="dark"
+  schema={faqSchema}
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Start</a><span class="sep">/</span>
+        <span>Häufige Fragen</span>
+      </div>
+      <h1>Häufige Fragen.</h1>
+      <p class="lede">Antworten auf die häufigsten Fragen zu den Angeboten, Abläufen und Rahmenbedingungen. Wenn etwas offen bleibt — eine unverbindliche Nachricht reicht.</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-aside reveal">
+          <span class="eyebrow">Häufige Fragen</span>
+          <h2 style="margin-top:14px">Antworten in Ruhe.</h2>
+          <p>Wenn etwas offen bleibt: Eine unverbindliche Nachricht reicht aus, um in Kontakt zu kommen — ohne dass schon alles geklärt sein muss.</p>
+          <div class="actions" style="margin-top:32px">
+            <a href="/#kontakt" class="btn btn-primary">Kontakt aufnehmen <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="faq-list reveal">
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Muss man Erfahrung mit Tieren haben?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Nein. Erfahrung mit Tieren ist nicht notwendig. Viele Menschen erleben bereits durch die Begegnung mit Tieren und Natur einen Zugang zu Ruhe, Beziehung und neuen Erfahrungen.</p>
+              <p>Die Arbeit orientiert sich immer am individuellen Tempo und an den jeweiligen Bedürfnissen. Niemand muss hier etwas leisten oder „können".</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Wie läuft ein erstes Kennenlernen ab?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Der erste Kontakt erfolgt in der Regel über die Webseite oder per Nachricht. Anschließend wird ein unverbindlicher Kennenlerntermin vereinbart.</p>
+              <p>Dabei geht es vor allem darum, sich gegenseitig kennenzulernen, Fragen zu klären und gemeinsam zu schauen, welches Angebot passend sein könnte. Vertrauen und Beziehung dürfen Schritt für Schritt entstehen.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Wie lange dauern die Angebote?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Die Dauer richtet sich nach dem jeweiligen Setting und den individuellen Bedürfnissen. Einzelsettings dauern in der Regel zwischen 45 und 90 Minuten.</p>
+              <p>Zusätzlich sind auch längere Gruppenangebote, Workshops oder Tagesangebote möglich.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Finden die Angebote einzeln oder in Gruppen statt?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Beides ist möglich. Die Gruppen werden bewusst klein gehalten — in der Regel maximal fünf Personen — damit individuelle Begleitung und echte Beziehung möglich bleiben. Workshops oder besondere Tagesangebote können davon abweichen.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Wie groß sind die Gruppen?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Die Gruppen werden bewusst klein gehalten, damit individuelle Begleitung, Beziehung und gemeinsames Arbeiten möglich bleiben. In der Regel bestehen Gruppen aus maximal fünf Personen. Workshops oder besondere Tagesangebote können davon abweichen.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Was passiert bei schlechtem Wetter?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Die Arbeit findet überwiegend draußen in der Natur statt. Für Einzelsettings gibt es zudem geschützte Möglichkeiten im Innenbereich. Natur gehört mit ihren unterschiedlichen Wetterbedingungen bewusst zur gemeinsamen Erfahrung dazu — die Gestaltung wird jedoch immer achtsam an die Situation angepasst.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Ersetzen die Angebote eine Therapie?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Nein. Die Angebote verstehen sich als begleitende, stabilisierende und ressourcenorientierte Unterstützung. Sie ersetzen keine psychotherapeutische, psychiatrische oder medizinische Behandlung.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Für wen sind die Angebote geeignet?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Die Angebote richten sich an Kinder, Jugendliche und Erwachsene in unterschiedlichen Lebenssituationen — bei sozial-emotionalem Unterstützungsbedarf, Stress und Überforderung, Konflikt- oder Aggressionsthematiken, emotionalen Belastungen, Erschöpfung oder dem Wunsch nach Stabilisierung und persönlicher Entwicklung.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Können Eltern oder Bezugspersonen eingebunden werden?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Ja, das ist grundsätzlich möglich. Gerade bei Kindern und Jugendlichen kann es sinnvoll sein, Eltern oder wichtige Bezugspersonen in Prozesse mit einzubeziehen. Gleichzeitig wird immer individuell geschaut, welche Form der Begleitung hilfreich und passend ist.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Muss aktiv mit den Tieren gearbeitet werden?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Nein. Manche Menschen möchten aktiv mit den Tieren arbeiten, andere erleben bereits durch Beobachtung, Ruhe oder gemeinsame Zeit in der Natur einen positiven Zugang. Niemand wird zu Kontakt oder Nähe gedrängt.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Wo finden die Angebote statt?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Die Angebote finden überwiegend auf dem naturnahen Hofgelände am Waldrand von Marburg statt. Wald, Wiesen, Garten und Tiere schaffen dort einen ruhigen und naturnahen Rahmen fern vom Alltag. In einzelnen Fällen können auch externe Angebote oder Kooperationen möglich sein.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Was ist beim Erstkontakt besonders wichtig?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Besonders wichtig ist ein respektvoller und wertfreier Rahmen. Niemand muss beim ersten Gespräch sofort alles erzählen oder offenlegen. Vertrauen darf Schritt für Schritt entstehen. Gerade bei Kindern und Jugendlichen ist es wichtig, nicht über sie zu sprechen, sondern sie aktiv mit einzubeziehen und ernst zu nehmen.</p>
+            </div></div></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,586 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "milele.mit.herz",
+  "description": "Tiergestützte Interventionen, Coaching und Deeskalationsarbeit in naturnaher Umgebung am Waldrand von Marburg.",
+  "url": "https://milele-mit-herz.de",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Marburg",
+    "addressRegion": "Hessen",
+    "addressCountry": "DE"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Sven Morawa"
+  }
+};
+---
+
+<Layout
+  title="milele.mit.herz"
+  description="Tiergestützte Interventionen, Coaching und Deeskalationsarbeit in naturnaher Umgebung am Waldrand von Marburg — ruhig, beziehungsorientiert und ohne Leistungsdruck."
+  schema={schema}
+>
+
+  <!-- ───────── Hero ───────── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <h1>Raum für <em>Beziehung,</em><br/>Stabilität und<br/>Entwicklung.</h1>
+          <p class="hero-sub">
+            milele.mit.herz verbindet tiergestützte Interventionen, Coaching und Deeskalationsarbeit in naturnaher Umgebung am Waldrand von Marburg — ruhig, beziehungsorientiert und ohne Leistungsdruck.
+          </p>
+          <div class="hero-actions">
+            <a href="#angebote" class="btn btn-primary">
+              Angebote entdecken <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#einleitung" class="btn btn-secondary">Mehr erfahren</a>
+            <a href="https://www.instagram.com/milele.mit.herz/" target="_blank" rel="noopener" class="btn btn-instagram btn-icon" aria-label="milele.mit.herz auf Instagram">
+              <svg class="ig-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <img class="photo" src="/assets/photos/gelaende.png" alt="Naturnahes Gelände von milele.mit.herz am Waldrand" />
+          <button class="hero-play" type="button" id="hero-play" aria-label="Video abspielen">
+            <span class="hero-play-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </button>
+          <div class="badge">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Am Waldrand von Marburg · naturnah · geschützt</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-meta reveal">
+        <a href="#angebote" class="hero-meta-link">
+          <span class="label">Für</span>
+          <span class="value">Kinder, Jugendliche &amp; Erwachsene</span>
+        </a>
+        <a href="#angebote" class="hero-meta-link">
+          <span class="label">Setting</span>
+          <span class="value">Einzeln &amp; Kleingruppen</span>
+        </a>
+        <a href="#ort" class="hero-meta-link">
+          <span class="label">Ort</span>
+          <span class="value">Naturnaher Hof, Marburg</span>
+        </a>
+        <a href="#haltung" class="hero-meta-link">
+          <span class="label">Haltung</span>
+          <span class="value">Beziehung statt Bewertung</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Pull quote band ───────── -->
+  <section class="quote-band">
+    <div class="container reveal">
+      <div class="pawheart" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 18c-3.5 0-7 3-7 6 0 2 1.6 3 3.6 3 1.5 0 2.4-.8 3.4-.8s1.9.8 3.4.8c2 0 3.6-1 3.6-3 0-3-3.5-6-7-6zM8 13a3 3 0 110 6 3 3 0 010-6zm16 0a3 3 0 110 6 3 3 0 010-6zM12 6a3 3 0 110 6 3 3 0 010-6zm8 0a3 3 0 110 6 3 3 0 010-6z"/></svg>
+        <svg viewBox="0 0 32 32" fill="#CC6F46"><path d="M16 27s-9-5.5-9-13a5 5 0 019-3 5 5 0 019 3c0 7.5-9 13-9 13z"/></svg>
+      </div>
+      <span class="eyebrow">Leitgedanke</span>
+      <h2>Tiere berühren Herzen.</h2>
+      <p class="quote-sub">
+        Sie reagieren ehrlich, ohne Bewertung und im Moment. Genau darin liegt die besondere Qualität tiergestützter Interventionen — ein Zugang, den Worte allein oft nicht erreichen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ───────── Einleitung ───────── -->
+  <section class="intro" id="einleitung">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-aside reveal">
+          <span class="eyebrow">Willkommen</span>
+          <h2>Ein Ort zum Ankommen.</h2>
+          <div class="intro-media">
+            <img src="/assets/photos/gelaende.png" alt="Naturnahes Gelände am Waldrand" />
+          </div>
+        </div>
+        <div class="intro-body reveal">
+          <p>
+            milele.mit.herz ist ein naturnaher Ort am Waldrand von Marburg, an dem Menschen zur Ruhe kommen, durchatmen und sich ohne Bewertung begegnen dürfen.
+          </p>
+          <p>
+            Umgeben von Wald, Wiesen, Garten und Tieren entsteht Raum für Beziehung, Stabilisierung und persönliche Entwicklung. Die Arbeit verbindet tiergestützte Interventionen, Coaching sowie Anti-Aggressivitäts- und Deeskalationsarbeit mit einem ressourcen-, handlungs- und beziehungsorientierten Ansatz.
+          </p>
+          <p>
+            Nicht Leistung oder Druck stehen im Mittelpunkt, sondern Vertrauen, Sicherheit, praktische Erfahrung und eine Begleitung, die sich an den individuellen Bedürfnissen und Ressourcen der Menschen orientiert.
+          </p>
+          <p>
+            Die Angebote richten sich an Kinder, Jugendliche und Erwachsene in herausfordernden Lebenssituationen — ebenso wie an Menschen, die sich mehr Ruhe, Orientierung und Verbindung zu sich selbst wünschen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Werte / Haltung ───────── -->
+  <section class="values" id="haltung">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Haltung &amp; Werte</span>
+        <h2>Was die Arbeit ausmacht.</h2>
+      </div>
+
+      <div class="values-grid reveal">
+        <article class="value">
+          <span class="value-num">01 · Grundlage</span>
+          <h3>Beziehung statt Bewertung</h3>
+          <p>Echte Entwicklung entsteht dort, wo Menschen sich sicher fühlen dürfen. Vertrauen, ehrlicher Kontakt und ein wertfreier Umgang bilden die Grundlage der gemeinsamen Arbeit. Menschen müssen hier nichts darstellen oder leisten, sondern dürfen einfach ankommen — mit allem, was gerade da ist.</p>
+        </article>
+
+        <article class="value">
+          <span class="value-num">02 · Methode</span>
+          <h3>Entwicklung durch Erfahrung</h3>
+          <p>Nicht nur Gespräche stehen im Mittelpunkt, sondern gemeinsames Tun, Naturerfahrungen, Verantwortung und praktische Prozesse. Durch unmittelbare Erfahrungen können neue Perspektiven, Selbstwirksamkeit und Vertrauen in die eigenen Fähigkeiten entstehen.</p>
+        </article>
+
+        <article class="value">
+          <span class="value-num">03 · Atmosphäre</span>
+          <h3>Ruhe und Stabilisierung</h3>
+          <p>Die naturnahe Umgebung schafft Abstand vom Alltag und bietet einen geschützten Rahmen für emotionale Entlastung, Orientierung und Regulation. Gerade in belastenden Lebenssituationen kann Ruhe ein wichtiger Schritt sein, um wieder Zugang zu den eigenen Ressourcen zu finden.</p>
+        </article>
+
+        <article class="value">
+          <span class="value-num">04 · Begleiter</span>
+          <h3>Tiere als unterstützende Begleiter</h3>
+          <p>Tiere begegnen Menschen unmittelbar, ehrlich und ohne Vorurteile. In der tiergestützten Intervention entstehen so Zugänge, die über Sprache allein oft schwer erreichbar sind. Die Tiere werden nicht als „Werkzeuge" eingesetzt, sondern als fühlende Lebewesen respektiert, die selbst Beziehung, Sicherheit und Vertrauen erleben dürfen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Angebote ───────── -->
+  <section class="angebote" id="angebote">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Angebote</span>
+        <h2>Vier Wege der Begleitung.</h2>
+        <p class="lede">Jedes Angebot wird individuell an Bedürfnisse, Situation und Tempo angepasst — einzeln oder in kleinen Gruppen.</p>
+      </div>
+
+      <div class="angebote-grid reveal">
+
+        <article class="card">
+          <div class="card-body">
+            <span class="eyebrow">01 · Tiergestützte Interventionen</span>
+            <h3>Beziehung, die ohne Worte wirken kann.</h3>
+            <p>Tiergestützte Pädagogik und ressourcenorientierte Arbeit mit Tieren und Natur zur Förderung von Beziehung, Selbstwahrnehmung, emotionaler Stabilisierung und persönlicher Entwicklung.</p>
+            <div class="card-media">
+              <img class="photo" src="/assets/photos/sven-mit-schafen.png" alt="Sven mit Schafen am Schafstall" style="object-position: center 30%;" />
+            </div>
+            <a href="/angebote/tiergestuetzte-interventionen" class="card-link">Mehr erfahren <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <span class="eyebrow">02 · Jugendhilfe &amp; soziale Entwicklung</span>
+            <h3>Beziehung vor Bewertung.</h3>
+            <p>Unterstützung für Kinder und Jugendliche in belastenden oder herausfordernden Lebenssituationen — handlungsorientiert, beziehungsorientiert und mit klaren, verlässlichen Strukturen.</p>
+            <div class="card-media">
+              <img class="photo" src="/assets/photos/sinnenpfad.png" alt="Barfußweg im Garten — sensorisches Erleben" style="object-position: center 30%;" />
+            </div>
+            <a href="/angebote/jugendhilfe" class="card-link">Mehr erfahren <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <span class="eyebrow">03 · Coaching &amp; Stabilisierung</span>
+            <h3>Orientierung finden, neue Wege entdecken.</h3>
+            <p>Begleitung für Menschen in Phasen von Stress, Überforderung, Erschöpfung oder persönlicher Neuorientierung — mit Ruhe, Natur und Raum für Entwicklung. Ehrlich, empathisch, auf Augenhöhe.</p>
+            <div class="card-media">
+              <img class="photo" src="/assets/photos/pferd.png" alt="Pferd auf der Wiese" style="object-position: center 25%;" />
+            </div>
+            <a href="/angebote/coaching" class="card-link">Mehr erfahren <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <span class="eyebrow">04 · Anti-Aggressivität &amp; Deeskalation</span>
+            <h3>Verstehen, aber nicht einverstanden sein.</h3>
+            <p>Arbeit an Emotionsregulation, Konfliktverhalten und neuen Handlungsmöglichkeiten in einem sicheren, klaren und wertfreien Rahmen — mit Beziehung, Reflexion und praktischen Erfahrungen.</p>
+            <div class="card-media">
+              <img class="photo" src="/assets/photos/sven-mit-pferd.png" alt="Sven in ruhiger Begegnung mit dem Pferd" style="object-position: center 30%;" />
+            </div>
+            <a href="/angebote/anti-aggressivitaet" class="card-link">Mehr erfahren <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Unsere Tiere (Sektion) ───────── -->
+  <section class="tiere-sektion" id="tiere" aria-label="Unsere Tiere">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Unsere Tiere</span>
+        <h2>Begegnung, die ohne Worte wirkt.</h2>
+        <p class="lede">Jedes Tier hat seine eigene Geschichte, sein eigenes Tempo und seinen eigenen Charakter. Auf die Bilder klicken, um mehr über die Tiere zu erfahren.</p>
+      </div>
+
+      <ul class="tiere-cards reveal">
+        <li>
+          <button class="tier-card" data-tier="hund" type="button">
+            <span class="tier-card-thumb">
+              <img src="/assets/photos/schafstall-hund-schafe.png" alt="" loading="lazy" />
+            </span>
+            <span class="tier-card-name">Hund</span>
+            <span class="tier-card-arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button class="tier-card" data-tier="huehner" type="button">
+            <span class="tier-card-thumb tier-card-thumb--empty">
+              <span class="tier-card-glyph" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 4c-4 0-7 3-7 7 0 2 1 4 2 5l-2 1c-3 1-5 4-5 7 0 3 3 4 6 4h12c3 0 6-1 6-4 0-3-2-6-5-7l-2-1c1-1 2-3 2-5 0-4-3-7-7-7z"/></svg>
+              </span>
+            </span>
+            <span class="tier-card-name">Hühner</span>
+            <span class="tier-card-arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button class="tier-card" data-tier="schafe" type="button">
+            <span class="tier-card-thumb">
+              <img src="/assets/photos/sven-mit-schafen.png" alt="" loading="lazy" style="object-position: center 30%;" />
+            </span>
+            <span class="tier-card-name">Schafe</span>
+            <span class="tier-card-arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button class="tier-card" data-tier="kaninchen" type="button">
+            <span class="tier-card-thumb">
+              <img src="/assets/photos/kaninchen-meerschweinchen.png" alt="" loading="lazy" />
+            </span>
+            <span class="tier-card-name">Kaninchen</span>
+            <span class="tier-card-arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button class="tier-card" data-tier="meerschweinchen" type="button">
+            <span class="tier-card-thumb">
+              <img src="/assets/photos/meerschweinchen.png" alt="" loading="lazy" />
+            </span>
+            <span class="tier-card-name">Meerschweinchen</span>
+            <span class="tier-card-arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tier modal -->
+  <div class="tier-modal" id="tier-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="tier-modal-title">
+    <div class="tier-modal-backdrop" data-close></div>
+    <div class="tier-modal-panel">
+      <button class="tier-modal-close" type="button" aria-label="Schließen" data-close>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <div class="tier-modal-grid">
+        <div class="tier-modal-gallery" id="tier-modal-gallery"></div>
+        <div class="tier-modal-body">
+          <span class="eyebrow" id="tier-modal-eyebrow">Unsere Tiere</span>
+          <h2 id="tier-modal-title"></h2>
+          <p id="tier-modal-text"></p>
+          <p class="tier-modal-note">Weitere Fotos folgen.</p>
+        </div>
+      </div>
+
+      <nav class="tier-modal-nav" aria-label="Anderes Tier wählen">
+        <button data-tier-nav="hund" type="button">Hund</button>
+        <button data-tier-nav="huehner" type="button">Hühner</button>
+        <button data-tier-nav="schafe" type="button">Schafe</button>
+        <button data-tier-nav="kaninchen" type="button">Kaninchen</button>
+        <button data-tier-nav="meerschweinchen" type="button">Meerschweinchen</button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ───────── Der Ort ───────── -->
+  <section class="ort" id="ort">
+    <div class="container">
+      <div class="ort-grid">
+        <div class="ort-media reveal">
+          <div class="a"><img class="photo" src="/assets/photos/schafstall-hund-schafe.png" alt="Schafstall mit Hund und Schafen" /></div>
+          <div class="b"><img class="photo" src="/assets/photos/meerschweinchen.png" alt="Meerschweinchen im Stall" /></div>
+          <div class="c"><img class="photo" src="/assets/photos/kaninchen-meerschweinchen.png" alt="Kaninchen und Meerschweinchen" /></div>
+        </div>
+
+        <div class="ort-body reveal">
+          <span class="eyebrow">Der Ort</span>
+          <h2 style="margin-top:14px">Natur als Erfahrungsraum.</h2>
+          <div class="stack">
+            <p>Nur wenige Minuten von der Marburger Innenstadt entfernt liegt ein ruhiger Ort am Waldrand — geprägt von Natur, Weite und einer entschleunigten Atmosphäre.</p>
+            <p>Wald, Garten, Wiesen und die Tiere schaffen Abstand von Hektik, Reizüberflutung und Alltagsdruck. Die Atmosphäre ist ruhig, naturverbunden und klar.</p>
+          </div>
+          <blockquote class="ort-affirm">
+            Hier darf durchgeatmet werden.<br/>
+            Hier darf Beziehung entstehen.<br/>
+            Hier darf man einfach erst einmal da sein.
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Warum tiergestützt ───────── -->
+  <section class="tiere" id="mensch-tier">
+    <div class="container">
+      <div class="tiere-grid">
+        <div class="reveal">
+          <span class="eyebrow">Mensch &amp; Tier</span>
+          <h2 style="margin-top:14px">Die besondere Wirkung der Mensch-Tier-Beziehung.</h2>
+          <p style="margin-top:24px; font-family: var(--serif); font-style: italic; font-size: 1.25rem; line-height: 1.55;">
+            Tiere reagieren unmittelbar und authentisch. Sie bewerten nicht nach Herkunft, Aussehen oder Leistung, sondern begegnen Menschen im Moment.
+          </p>
+
+          <div class="tiere-media">
+            <img src="/assets/photos/mensch-tier.jpeg" alt="Innige Begegnung mit den Schafen auf der Weide" />
+          </div>
+        </div>
+
+        <ol class="tiere-list reveal">
+          <li>
+            <span class="num">i</span>
+            <div>
+              <h4>Begegnung ohne Bewertung</h4>
+              <p>Im Kontakt mit Tieren werden Beziehung, Selbstwahrnehmung, Verantwortung und emotionale Prozesse oft auf eine sehr unmittelbare Weise erlebbar.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">ii</span>
+            <div>
+              <h4>Regulation und Vertrauen</h4>
+              <p>Tiere können helfen, Spannungen zu regulieren, Vertrauen aufzubauen und wieder mehr Zugang zu den eigenen Gefühlen und Ressourcen zu finden.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">iii</span>
+            <div>
+              <h4>Zugänge jenseits der Sprache</h4>
+              <p>Besonders in belastenden Lebenssituationen entsteht über Natur, Bewegung, Struktur und gemeinsames Tun ein Zugang, den Worte allein nicht immer erreichen.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">iv</span>
+            <div>
+              <h4>Respektvoller Umgang</h4>
+              <p>Die Arbeit orientiert sich an einem achtsamen Umgang — mit den Menschen ebenso wie mit den Tieren. Sie sind keine „Werkzeuge", sondern fühlende Lebewesen mit eigener Geschichte.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Über mich Preview ───────── -->
+  <section class="uebermich" id="uebermich">
+    <div class="container">
+      <div class="uebermich-grid">
+        <div class="uebermich-media reveal">
+          <img class="photo" src="/assets/photos/sven-mit-esel.png" alt="Sven in ruhiger Begegnung mit einem Esel" style="object-position: center 30%;" />
+        </div>
+
+        <div class="uebermich-body reveal">
+          <span class="eyebrow">Über mich</span>
+          <h2 style="margin-top:14px">Beziehung, Vertrauen und Entwicklung auf Augenhöhe.</h2>
+          <p>
+            Ich bin Sven Morawa und begleite Menschen mit einem ressourcen- und beziehungsorientierten Ansatz, der tiergestützte Interventionen, Coaching und Deeskalationsarbeit miteinander verbindet.
+          </p>
+          <p>
+            Geprägt durch eigene Lebenserfahrungen, meine Arbeit als Schulsozialarbeiter sowie Weiterbildungen im Bereich Anti-Aggressivität, Deeskalation und tiergestützte Interventionen steht für mich vor allem eines im Mittelpunkt: Menschen einen sicheren Raum zu bieten, in dem Entwicklung ohne Druck möglich werden darf.
+          </p>
+          <p>
+            Die Verbindung aus Natur, Beziehung, Struktur und praktischer Erfahrung schafft dabei oft Zugänge, die nachhaltig wirken — ruhig, ehrlich und auf Augenhöhe.
+          </p>
+
+          <div class="signature">
+            Sven Morawa
+            <small>Gründer · milele.mit.herz</small>
+          </div>
+
+          <div class="actions">
+            <a href="/ueber-mich" class="btn btn-primary">Mehr über mich <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="#kontakt" class="btn btn-ghost">Kontakt aufnehmen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FAQ ───────── -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-aside reveal">
+          <span class="eyebrow">Häufige Fragen</span>
+          <h2 style="margin-top:14px">Antworten in Ruhe.</h2>
+          <p>Wenn etwas offen bleibt: Eine unverbindliche Nachricht reicht aus, um in Kontakt zu kommen — ohne dass schon alles geklärt sein muss.</p>
+        </div>
+
+        <div class="faq-list reveal">
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Muss man Erfahrung mit Tieren haben?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Nein. Erfahrung mit Tieren ist nicht notwendig. Viele Menschen erleben bereits durch die Begegnung mit Tieren und Natur einen Zugang zu Ruhe, Beziehung und neuen Erfahrungen.</p>
+              <p>Die Arbeit orientiert sich immer am individuellen Tempo und an den jeweiligen Bedürfnissen. Niemand muss hier etwas leisten oder „können".</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Wie läuft ein erstes Kennenlernen ab?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Der erste Kontakt erfolgt in der Regel über die Webseite oder per Nachricht. Anschließend wird ein unverbindlicher Kennenlerntermin vereinbart.</p>
+              <p>Dabei geht es vor allem darum, sich gegenseitig kennenzulernen, Fragen zu klären und gemeinsam zu schauen, welches Angebot passend sein könnte. Vertrauen und Beziehung dürfen Schritt für Schritt entstehen.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Wie lange dauern die Angebote?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Die Dauer richtet sich nach dem jeweiligen Setting und den individuellen Bedürfnissen. Einzelsettings dauern in der Regel zwischen 45 und 90 Minuten.</p>
+              <p>Zusätzlich sind auch längere Gruppenangebote, Workshops oder Tagesangebote möglich.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Finden die Angebote einzeln oder in Gruppen statt?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Beides ist möglich. Die Gruppen werden bewusst klein gehalten — in der Regel maximal fünf Personen — damit individuelle Begleitung und echte Beziehung möglich bleiben. Workshops oder besondere Tagesangebote können davon abweichen.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Was passiert bei schlechtem Wetter?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Die Arbeit findet überwiegend draußen in der Natur statt. Für Einzelsettings gibt es zudem geschützte Möglichkeiten im Innenbereich. Natur gehört mit ihren unterschiedlichen Wetterbedingungen bewusst zur gemeinsamen Erfahrung dazu — die Gestaltung wird jedoch immer achtsam an die Situation angepasst.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Ersetzen die Angebote eine Therapie?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Nein. Die Angebote verstehen sich als begleitende, stabilisierende und ressourcenorientierte Unterstützung. Sie ersetzen keine psychotherapeutische, psychiatrische oder medizinische Behandlung.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Können Eltern oder Bezugspersonen eingebunden werden?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Ja, das ist grundsätzlich möglich. Gerade bei Kindern und Jugendlichen kann es sinnvoll sein, Eltern oder wichtige Bezugspersonen in Prozesse mit einzubeziehen. Gleichzeitig wird immer individuell geschaut, welche Form der Begleitung hilfreich und passend ist.</p>
+            </div></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              Muss aktiv mit den Tieren gearbeitet werden?
+              <span class="ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div><div>
+              <p>Nein. Manche Menschen möchten aktiv mit den Tieren arbeiten, andere erleben bereits durch Beobachtung, Ruhe oder gemeinsame Zeit in der Natur einen positiven Zugang. Niemand wird zu Kontakt oder Nähe gedrängt.</p>
+            </div></div></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Kontakt ───────── -->
+  <section class="kontakt" id="kontakt">
+    <div class="container">
+      <div class="kontakt-grid">
+        <div class="kontakt-body reveal">
+          <span class="eyebrow">Kontakt</span>
+          <h2>In Ruhe Kontakt aufnehmen.</h2>
+          <p class="lede">
+            Der erste Kontakt dient vor allem dazu, gemeinsam herauszufinden, ob das Angebot passend sein könnte. Eine kurze, unverbindliche Nachricht reicht — Antworten darf in Ruhe entstehen.
+          </p>
+
+          <ul class="points">
+            <li>Unverbindliches Kennenlernen, ohne Erwartungen.</li>
+            <li>Antwort meist innerhalb weniger Werktage.</li>
+            <li>Auch geeignet für Anfragen von Einrichtungen, Schulen oder Trägern.</li>
+          </ul>
+        </div>
+
+        <form class="contact-card reveal" id="kontakt-form" novalidate>
+          <h3>Nachricht senden</h3>
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="thema">Worum geht es?</label>
+            <input id="thema" name="thema" type="text" placeholder="Kurzes Stichwort, z. B. Kennenlernen" />
+          </div>
+
+          <div class="field">
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" rows="4" placeholder="Was bewegt dich gerade? Was möchtest du wissen?"></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">
+              Anfrage senden <span class="arrow" aria-hidden="true">→</span>
+            </button>
+            <span class="hint">Antwort folgt in Ruhe — meist innerhalb weniger Tage.</span>
+          </div>
+
+          <p class="form-status" style="margin-top:16px; font-size: 14px;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Layout>

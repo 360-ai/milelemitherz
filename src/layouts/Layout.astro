@@ -1,0 +1,217 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  schema?: object;
+  headerTheme?: 'light' | 'dark';
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = '/assets/og-image.jpg',
+  schema,
+  headerTheme = 'light',
+} = Astro.props;
+
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
+const pageTitle = title === 'milele.mit.herz'
+  ? 'milele.mit.herz — Raum für Beziehung, Stabilität und Entwicklung'
+  : `${title} | milele.mit.herz`;
+---
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={new URL(ogImage, Astro.site).href} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles (source of truth: claude design/styles.css) -->
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/logo.png" />
+
+  <!-- JSON-LD Schema -->
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+</head>
+
+<body data-header-theme={headerTheme}>
+
+  <!-- ───────── Navigation ───────── -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="milele.mit.herz Startseite">
+        <img src="/assets/logo.png" alt="" />
+        <span class="brandmark">milele<span>.mit.herz</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <div class="nav-group">
+          <button class="nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+            Der Ort
+            <svg class="nav-caret" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <a href="/#einleitung" role="menuitem">Ankommen</a>
+            <a href="/#haltung" role="menuitem">Haltung &amp; Werte</a>
+            <a href="/#ort" role="menuitem">Natur als Erfahrungsraum</a>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <button class="nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+            Angebote
+            <svg class="nav-caret" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <a href="/#angebote" role="menuitem">Alle Angebote</a>
+            <a href="/angebote/tiergestuetzte-interventionen" role="menuitem">Tiergestützte Interventionen</a>
+            <a href="/angebote/jugendhilfe" role="menuitem">Jugendhilfe</a>
+            <a href="/angebote/coaching" role="menuitem">Coaching &amp; Stabilisierung</a>
+            <a href="/angebote/anti-aggressivitaet" role="menuitem">Anti-Aggressivität</a>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <button class="nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+            Tiere
+            <svg class="nav-caret" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <a href="/#tiere" role="menuitem">Unsere Tiere</a>
+            <a href="/#mensch-tier" role="menuitem">Mensch &amp; Tier</a>
+          </div>
+        </div>
+
+        <a href="/ueber-mich">Über mich</a>
+        <a href="/#faq">Fragen</a>
+        <a href="/#kontakt">Kontakt</a>
+      </nav>
+
+      <a href="https://www.instagram.com/milele.mit.herz/" target="_blank" rel="noopener" class="nav-ig" aria-label="milele.mit.herz auf Instagram">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+          <circle cx="12" cy="12" r="4.2"></circle>
+          <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </a>
+
+      <a href="/#kontakt" class="btn btn-primary nav-cta desktop-only">
+        Unverbindlich anfragen
+      </a>
+
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu"></button>
+    </div>
+
+    <div class="nav-menu" id="nav-menu">
+      <ul>
+        <li class="nav-menu-group">Der Ort</li>
+        <li><a href="/#einleitung">Ankommen</a></li>
+        <li><a href="/#haltung">Haltung &amp; Werte</a></li>
+        <li><a href="/#ort">Natur als Erfahrungsraum</a></li>
+        <li class="nav-menu-group">Angebote</li>
+        <li><a href="/#angebote">Alle Angebote</a></li>
+        <li><a href="/angebote/tiergestuetzte-interventionen">Tiergestützte Interventionen</a></li>
+        <li><a href="/angebote/jugendhilfe">Jugendhilfe</a></li>
+        <li><a href="/angebote/coaching">Coaching &amp; Stabilisierung</a></li>
+        <li><a href="/angebote/anti-aggressivitaet">Anti-Aggressivität</a></li>
+        <li class="nav-menu-group">Tiere</li>
+        <li><a href="/#tiere">Unsere Tiere</a></li>
+        <li><a href="/#mensch-tier">Mensch &amp; Tier</a></li>
+        <li class="nav-menu-group">Weiteres</li>
+        <li><a href="/ueber-mich">Über mich</a></li>
+        <li><a href="/#faq">Fragen</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+    <slot />
+  </main>
+
+  <!-- ───────── Footer ───────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="row">
+            <img src="/assets/logo.png" alt="" />
+            <span class="name">milele<span>.mit.herz</span></span>
+          </div>
+          <p>Ein naturnaher Ort am Waldrand von Marburg — für Beziehung, Stabilität und Entwicklung.</p>
+        </div>
+
+        <div>
+          <h4>Angebote</h4>
+          <ul>
+            <li><a href="/angebote/tiergestuetzte-interventionen">Tiergestützte Interventionen</a></li>
+            <li><a href="/angebote/jugendhilfe">Jugendhilfe</a></li>
+            <li><a href="/angebote/coaching">Coaching</a></li>
+            <li><a href="/angebote/anti-aggressivitaet">Anti-Aggressivität</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Entdecken</h4>
+          <ul>
+            <li><a href="/#einleitung">Über den Ort</a></li>
+            <li><a href="/ueber-mich">Über mich</a></li>
+            <li><a href="/#faq">Häufige Fragen</a></li>
+            <li><a href="/#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Folgen &amp; Schreiben</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/milele.mit.herz/" target="_blank" rel="noopener">Instagram →</a></li>
+            <li><a href="/#kontakt">Anfrage senden</a></li>
+            <li>Marburg, Hessen</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> milele.mit.herz · Sven Morawa</span>
+        <div class="legal">
+          <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year')!.textContent = String(new Date().getFullYear());
+  </script>
+  <script src="/script.js" defer></script>
+
+</body>
+</html>

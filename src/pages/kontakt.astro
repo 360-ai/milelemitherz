@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const WEBHOOK_URL = import.meta.env.PUBLIC_CONTACT_WEBHOOK || '';
+---
+
+<Layout
+  title="Kontakt"
+  description="Unverbindlich Kontakt aufnehmen — milele.mit.herz in Marburg. Tiergestützte Interventionen, Coaching, Deeskalationsarbeit und Jugendhilfe."
+  headerTheme="dark"
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Start</a><span class="sep">/</span>
+        <span>Kontakt</span>
+      </div>
+      <h1>In Ruhe Kontakt aufnehmen.</h1>
+      <p class="lede">Der erste Kontakt dient vor allem dazu, gemeinsam herauszufinden, ob das Angebot passend sein könnte. Eine kurze, unverbindliche Nachricht reicht — Antwort folgt in Ruhe.</p>
+    </div>
+  </section>
+
+  <section class="kontakt">
+    <div class="container">
+      <div class="kontakt-grid">
+        <div class="kontakt-body reveal">
+          <span class="eyebrow">Kontakt</span>
+          <h2>In Ruhe Kontakt aufnehmen.</h2>
+          <p class="lede">
+            Der erste Kontakt dient vor allem dazu, gemeinsam herauszufinden, ob das Angebot passend sein könnte. Eine kurze, unverbindliche Nachricht reicht — Antworten darf in Ruhe entstehen.
+          </p>
+
+          <ul class="points">
+            <li>Unverbindliches Kennenlernen, ohne Erwartungen.</li>
+            <li>Antwort meist innerhalb weniger Werktage.</li>
+            <li>Auch geeignet für Anfragen von Einrichtungen, Schulen oder Trägern.</li>
+          </ul>
+
+          <div style="margin-top: 40px;">
+            <div style="margin-bottom: 20px;">
+              <span style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss-deep); display: block; margin-bottom: 6px;">Ort</span>
+              <p style="margin:0; color: var(--earth);">Naturnaher Hof am Waldrand · Marburg, Hessen</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+              <span style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss-deep); display: block; margin-bottom: 6px;">Instagram</span>
+              <p style="margin:0;"><a href="https://www.instagram.com/milele.mit.herz/" target="_blank" rel="noopener" style="color: var(--earth); border-bottom: 1px solid var(--line);">@milele.mit.herz</a></p>
+            </div>
+            <div>
+              <span style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss-deep); display: block; margin-bottom: 6px;">Antwort</span>
+              <p style="margin:0; color: var(--earth);">In Ruhe — meist innerhalb weniger Werktage.</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-card reveal" id="kontakt-form" novalidate>
+          <h3>Nachricht senden</h3>
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="thema">Worum geht es?</label>
+            <input id="thema" name="thema" type="text" placeholder="Kurzes Stichwort, z. B. Kennenlernen" />
+          </div>
+
+          <div class="field">
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" rows="4" placeholder="Was bewegt dich gerade? Was möchtest du wissen?"></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">
+              Anfrage senden <span class="arrow" aria-hidden="true">→</span>
+            </button>
+            <span class="hint">Antwort folgt in Ruhe — meist innerhalb weniger Tage.</span>
+          </div>
+
+          <p class="form-status" style="margin-top:16px; font-size: 14px;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script define:vars={{ WEBHOOK_URL }}>
+  const form = document.getElementById('kontakt-form');
+  const statusEl = form ? form.querySelector('.form-status') : null;
+  const submitBtn = form ? form.querySelector('[type="submit"]') : null;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    if (submitBtn) { submitBtn.textContent = 'Wird gesendet…'; submitBtn.disabled = true; }
+
+    const data = {
+      name: form.elements['name']?.value,
+      email: form.elements['email']?.value,
+      thema: form.elements['thema']?.value,
+      nachricht: form.elements['nachricht']?.value,
+    };
+
+    try {
+      if (WEBHOOK_URL) {
+        await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+      }
+      if (statusEl) {
+        statusEl.textContent = 'Vielen Dank — deine Nachricht wurde übermittelt. Ich melde mich zeitnah.';
+        statusEl.style.color = 'var(--moss-deep)';
+      }
+      form.reset();
+    } catch {
+      if (statusEl) {
+        statusEl.textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuch es erneut.';
+        statusEl.style.color = 'var(--terracotta)';
+      }
+    } finally {
+      if (submitBtn) { submitBtn.textContent = 'Anfrage senden'; submitBtn.disabled = false; }
+    }
+  });
+</script>

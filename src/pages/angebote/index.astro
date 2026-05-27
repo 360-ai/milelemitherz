@@ -1,0 +1,174 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Angebote"
+  description="Tiergestützte Interventionen, Coaching & Stabilisierung, Anti-Aggressivitäts- und Deeskalationsarbeit sowie Jugendhilfe — die Angebote von milele.mit.herz im Überblick."
+  headerTheme="dark"
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Start</a><span class="sep">/</span>
+        <span>Angebote</span>
+      </div>
+      <h1>Angebote.</h1>
+      <p class="lede">Die Angebote von milele.mit.herz richten sich an Kinder, Jugendliche und Erwachsene in unterschiedlichen Lebenssituationen. Im Mittelpunkt stehen Beziehung, Vertrauen und eine Begleitung, die sich an den individuellen Bedürfnissen und Ressourcen orientiert.</p>
+    </div>
+  </section>
+
+  <section class="angebote" id="angebote">
+    <div class="container">
+      <div class="cards">
+
+        <article class="card reveal">
+          <div class="card-body">
+            <span class="eyebrow">01</span>
+            <h2>Tiergestützte Interventionen</h2>
+            <p>Tiere begegnen Menschen unmittelbar, ehrlich und ohne Vorurteile. Gerade darin liegt eine besondere Qualität tiergestützter Interventionen — als Weg zu Selbstwahrnehmung, emotionaler Stabilisierung und persönlicher Entwicklung.</p>
+            <a href="/angebote/tiergestuetzte-interventionen" class="card-link">Mehr erfahren <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="card-media">
+            <img class="photo" src="/assets/photos/sven-mit-schafen.png" alt="Sven in ruhiger Begegnung mit den Schafen" loading="lazy" />
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-body">
+            <span class="eyebrow">02</span>
+            <h2>Coaching &amp; Stabilisierung</h2>
+            <p>Begleitung für Menschen in Phasen von Stress, Überforderung, Erschöpfung oder persönlicher Neuorientierung — mit Ruhe, Natur und ehrlicher Begegnung als Rahmen für Entwicklung.</p>
+            <a href="/angebote/coaching" class="card-link">Mehr erfahren <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="card-media">
+            <img class="photo" src="/assets/photos/pferd.png" alt="Pferd auf der Wiese, ruhige Stimmung" loading="lazy" />
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-body">
+            <span class="eyebrow">03</span>
+            <h2>Anti-Aggressivität &amp; Deeskalation</h2>
+            <p>Aggression entsteht selten grundlos. Die Arbeit verbindet klare Haltung, Beziehung, Reflexion und praktische Erfahrungen — für neue Handlungsmöglichkeiten im Umgang mit Wut, Spannungen und Konflikten.</p>
+            <a href="/angebote/anti-aggressivitaet" class="card-link">Mehr erfahren <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="card-media">
+            <img class="photo" src="/assets/photos/gelaende.png" alt="Geschützter Ort am Waldrand — Holz, Bäume, Ruhe" loading="lazy" />
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-body">
+            <span class="eyebrow">04</span>
+            <h2>Jugendhilfe &amp; soziale Entwicklung</h2>
+            <p>Kinder und Jugendliche brauchen sichere Beziehungen und einen Rahmen, in dem sie sich selbst wieder wahrnehmen dürfen. Handlungsorientiert, beziehungsorientiert und mit klaren, verlässlichen Strukturen.</p>
+            <a href="/angebote/jugendhilfe" class="card-link">Mehr erfahren <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="card-media">
+            <img class="photo" src="/assets/photos/sinnenpfad.png" alt="Barfuß über einen gemeinsam gestalteten Weg" loading="lazy" />
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="kontakt" id="kontakt">
+    <div class="container">
+      <div class="kontakt-grid">
+        <div class="kontakt-body reveal">
+          <span class="eyebrow">Kontakt</span>
+          <h2>Welches Angebot passt?</h2>
+          <p class="lede">
+            Wenn du unsicher bist, welches Angebot passend sein könnte — schreib einfach. Ein erstes Gespräch hilft, gemeinsam einen Weg zu finden.
+          </p>
+
+          <ul class="points">
+            <li>Unverbindliches Kennenlernen, ohne Erwartungen.</li>
+            <li>Antwort meist innerhalb weniger Werktage.</li>
+            <li>Auch geeignet für Anfragen von Einrichtungen, Schulen oder Trägern.</li>
+          </ul>
+        </div>
+
+        <form class="contact-card reveal" id="kontakt-form" novalidate>
+          <h3>Nachricht senden</h3>
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="thema">Worum geht es?</label>
+            <input id="thema" name="thema" type="text" placeholder="Kurzes Stichwort, z. B. Kennenlernen" />
+          </div>
+
+          <div class="field">
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" rows="4" placeholder="Was bewegt dich gerade? Was möchtest du wissen?"></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">
+              Anfrage senden <span class="arrow" aria-hidden="true">→</span>
+            </button>
+            <span class="hint">Antwort folgt in Ruhe — meist innerhalb weniger Tage.</span>
+          </div>
+
+          <p class="form-status" style="margin-top:16px; font-size: 14px;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const form = document.getElementById('kontakt-form');
+  const statusEl = form ? form.querySelector('.form-status') : null;
+  const submitBtn = form ? form.querySelector('[type="submit"]') : null;
+  const WEBHOOK_URL = (import.meta as any).env?.PUBLIC_CONTACT_WEBHOOK || '';
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!(form as HTMLFormElement).checkValidity()) { (form as HTMLFormElement).reportValidity(); return; }
+
+    if (submitBtn) { (submitBtn as HTMLButtonElement).textContent = 'Wird gesendet…'; (submitBtn as HTMLButtonElement).disabled = true; }
+
+    const data = {
+      name: (form as HTMLFormElement).elements['name']?.value,
+      email: (form as HTMLFormElement).elements['email']?.value,
+      thema: (form as HTMLFormElement).elements['thema']?.value,
+      nachricht: (form as HTMLFormElement).elements['nachricht']?.value,
+    };
+
+    try {
+      if (WEBHOOK_URL) {
+        await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+      }
+      if (statusEl) {
+        (statusEl as HTMLElement).textContent = 'Vielen Dank — deine Nachricht wurde übermittelt. Ich melde mich zeitnah.';
+        (statusEl as HTMLElement).style.color = 'var(--moss-deep)';
+      }
+      (form as HTMLFormElement).reset();
+    } catch {
+      if (statusEl) {
+        (statusEl as HTMLElement).textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuch es erneut.';
+        (statusEl as HTMLElement).style.color = 'var(--terracotta)';
+      }
+    } finally {
+      if (submitBtn) { (submitBtn as HTMLButtonElement).textContent = 'Anfrage senden'; (submitBtn as HTMLButtonElement).disabled = false; }
+    }
+  });
+</script>
